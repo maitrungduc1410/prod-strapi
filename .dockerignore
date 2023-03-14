@@ -1,0 +1,8 @@
+node_modules
+.env*
+Dockerfile
+.git*
+.eslint*
+README.md
+.strapi-updater.json
+docker-compose.yml

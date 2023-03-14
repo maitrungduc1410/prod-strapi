@@ -1,0 +1,23 @@
+version: '3'
+
+services: 
+  strapi:
+    image: maitrungduc1410/prod-strapi
+    restart: always
+    ports:
+      - "1337:1337"
+    environment:
+      APP_KEYS: appkey1,appkey2 # add as many as app keys you want
+      API_TOKEN_SALT: apitokensalt
+      ADMIN_JWT_SECRET: adminsupersecret
+      TRANSFER_TOKEN_SALT: transfer_token_salt
+      JWT_SECRET: supersecret
+      # Database
+      DATABASE_CLIENT: mysql
+      DATABASE_HOST: localhost
+      DATABASE_PORT: "3306"
+      DATABASE_NAME: strapi
+      DATABASE_USERNAME: root
+      DATABASE_PASSWORD: myrootpass
+      DATABASE_SSL: "false"
+  
